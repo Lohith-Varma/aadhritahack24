@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+* { scrollbar-width: thin; scrollbar-color: #6366f1 #1e293b; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 999px; }
+
+/* PWA install prompt animation */
+@keyframes slide-up {
+  from { opacity: 0; transform: translate(-50%, 2rem); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
